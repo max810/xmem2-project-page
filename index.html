@@ -24,7 +24,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>Academic Project Page</title>
+  <title>XMem++: Production-level Video Segmentation From Few Annotated Frames</title>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
@@ -52,28 +52,35 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
+            <h1 class="title is-1 publication-title">XMem++: Production-level Video Segmentation From Few Annotated Frames</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
-                <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
-                  <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
-                  </span>
+                <a href="https://www.linkedin.com/in/maksym-bekuzarov-947490165/" target="_blank">Maksym Bekuzarov</a><sup>1*</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://www.linkedin.com/in/ariana-bermudez/" target="_blank">Ariana Michelle Bermudez Venegas</a><sup>1*</sup>,
+              </span>
+              <span class="author-block">
+                    <a href="https://joonyoung-cv.github.io/" target="_blank">Joon-Young Lee</a><sup>3</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://www.hao-li.com/Hao_Li/Hao_Li_-_about_me.html" target="_blank">Hao Li</a><sup>1,2</sup>
+              </span>
                   </div>
+                  <br>
 
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block">Institution Name<br>Conferance name and year</span>
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+                    <span class="author-block"><sup>1</sup>MBZUAI &nbsp;&nbsp;<sup>2</sup>Pinscreen &nbsp;&nbsp;<sup>3</sup>Adobe Research
+                      <br><span style="font-weight: bold;">ICCV 2023</span></span>
+                    <span class="eql-cntrb"><small><br><sup>*</sup>These authors equally contributed to the work.</small></span>
                   </div>
 
                   <div class="column has-text-centered">
                     <div class="publication-links">
                          <!-- Arxiv PDF link -->
                       <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                        <a href="https://arxiv.org/pdf/2307.15958.pdf" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
                           <i class="fas fa-file-pdf"></i>
@@ -83,7 +90,7 @@
                     </span>
 
                     <!-- Supplementary PDF link -->
-                    <span class="link-block">
+                    <!-- <span class="link-block">
                       <a href="static/pdfs/supplementary_material.pdf" target="_blank"
                       class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
@@ -91,7 +98,7 @@
                       </span>
                       <span>Supplementary</span>
                     </a>
-                  </span>
+                  </span> -->
 
                   <!-- Github link -->
                   <span class="link-block">
@@ -106,7 +113,7 @@
 
                 <!-- ArXiv abstract Link -->
                 <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                  <a href="https://arxiv.org/abs/2307.15958" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="ai ai-arxiv"></i>
@@ -125,15 +132,19 @@
 
 <!-- Teaser video-->
 <section class="hero teaser">
-  <div class="container is-max-desktop">
+  <div class="container">
     <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%">
+      <video poster="" id="tree" autoplay controls muted loop>
         <!-- Your video here -->
-        <source src="static/videos/banner_video.mp4"
+        <source src="static/videos/teaser_6_out_of_1800_smaller.mp4"
         type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
+        Inspired by cases from movie industry, we present <b>XMem++</b> - an Interactive Video Object Segmentation tool that performs high-fidelity segmentation in complex and challenging scenes with <b>only a few labeled examples </b>. 
+        <br><br> Someone wore a wrong shirt in the scene? A tattoo that shouldn't be there? Need to add some CGI to a very specific part of an object? 
+        <br>Or maybe you want to quickly label some video segmentation datasets with unusual/unique targets?
+        <br><br>This tool is for you.
+        <br> We also have a dataset for benchmarking purposes: <a href="#TODO">PUMaVOS</a>.
       </h2>
     </div>
   </div>
@@ -148,7 +159,15 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            Despite advancements in user-guided video segmentation, extracting complex objects consistently for highly complex scenes is still a labor-intensive task, especially for production. 
+            It is not uncommon that a majority of frames need to be annotated. 
+            We introduce a novel semi-supervised video object segmentation (SSVOS) model, <span style="font-weight: bold;">XMem++</span>, that improves existing memory-based models, with a permanent memory module. 
+            Most existing methods focus on single frame annotations, while our approach can effectively handle multiple user-selected frames with varying appearances of the same object or region.
+            Our method can extract highly consistent results while keeping the required number of frame annotations low. 
+            We further introduce an iterative and attention-based frame suggestion mechanism, which computes the next best frame for annotation. 
+            Our method is real-time and does not require retraining after each user input. 
+            We also introduce a new dataset, <span style="font-weight: bold;">PUMaVOS</span> (Partial and Unusual Masks for Video Object Segmentation), which covers new challenging use cases not found in previous benchmarks. 
+            We demonstrate SOTA performance on challenging (partial and multi-class) segmentation scenarios as well as long videos, while ensuring significantly fewer frame annotations than any existing method.
           </p>
         </div>
       </div>
@@ -158,45 +177,54 @@
 <!-- End paper abstract -->
 
 
-<!-- Image carousel -->
+<!-- Video carousel -->
 <section class="hero is-small">
-  <div class="hero-body">
+  <div class="hero-body is-centered">
     <div class="container">
+      <h2 class="title is-3" style="margin-left: 10%;">Performance</h2>
       <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
+        <div class="item item-video1">
+          <video poster="" id="video2" autoplay controls muted loop width="100%" height="100%">
+            <!-- Your video file here -->
+            <source src="static/videos/billie_hair_5_out_of_847_compressed.mp4"
+            type="video/mp4">
+          </video>
+          <h2 class="subtitle has-text-centered">
+            <b>Hair</b> (highly deformable and fluid) - only <b>5</b> out of <b>847</b> frames annotated (<b>~0.6%</b>)
+          </h2>
+        </div>
+        <div class="item item-video2">
+          <video poster="" id="video3" autoplay controls muted loop width="100%" height="100%">\
+            <!-- Your video file here -->
+            <source src="static/videos/sweater_5_out_of_552_compressed.mp4"
+            type="video/mp4">
+          </video>
+          <h2 class="subtitle has-text-centered">
+            <b>Sweater</b> (deformation, rotation) - only <b>5</b> out of <b>552</b> frames annotated (<b>~0.9%</b>)
+          </h2>
+        </div>
+        <div class="item item-video3">
+          <video poster="" id="video1" autoplay controls muted loop width="100%" height="100%">
+            <!-- Your video file here -->
+            <source src="static/videos/shirt_11_out_of_918_compressed.mp4"
+            type="video/mp4">
+          </video>
+          <h2 class="subtitle has-text-centered">
+            <b>Shirt</b> (deformation, rotation, occlusion, similar objects) - only <b>11</b> out of <b>918</b> frames annotated (<b>~1.2%</b>)
+          </h2>
+        </div>
       </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
     </div>
   </div>
-</div>
-</div>
+  <div class="container is-max-desktop">
+    <ul class="spaced">
+      <li><span class="subtitle">XMem++ achieves great visual results for a variety of use-cases, using only a few annotations (typically &lt; <b>10</b> for a <b>30-60s</b> video)</span></li>
+      <li><span class="subtitle">It treats ground truth annotations as references and infers masks for new frames based on their similarity to known references.</span></li>
+      <li><span class="subtitle">No fine-tuning, plug&amp;play, <b>30FPS</b> on <b>480p</b> video on a single GPU - check out the <a href="TODO GITHUB">[Code]</a> on GitHub for more details.</span></li>
+    </ul>
+  </div>
 </section>
-<!-- End image carousel -->
-
+<!-- End video carousel -->
 
 
 
@@ -221,46 +249,8 @@
 <!-- End youtube video -->
 
 
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
-
-
-
-
-
-
 <!-- Paper poster -->
-<section class="hero is-small is-light">
+<!-- <section class="hero is-small is-light">
   <div class="hero-body">
     <div class="container">
       <h2 class="title">Poster</h2>
@@ -270,16 +260,121 @@
         
       </div>
     </div>
-  </section>
+  </section> -->
 <!--End paper poster -->
-
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">PUMaVOS dataset</h2>
+      <div class="columns is-centered has-text-centered">
+        <div class="hero-body container is-max-desktop">
+          <div class="container" style="margin-bottom: 20px;">
+            <span class="subtitle">We used XMem++ to collect and annotate <b>PUMaVOS</b> - a dataset of challenging and practical use cases inspired by the movie production industry.</span>
+          </div>
+          <table class="imagegrid">
+          <tr>
+              <td width="25%">
+              <div>
+                  <img class="imgcell" src="static/gifs/billie_shoes_square.gif" alt="Billie Shoes">
+                  <!-- <p align="center">Shoes <br/> (<i>"billie_shoes" video</i>)</p> -->
+              </div>
+              </td>
+              <td width="25%">
+              <div>
+                  <img class="imgcell" src="static/gifs/chair_short_square.gif" alt="Short Chair">
+                  <!-- <p align="center">Reflections <br/> <i>("chair" video)</p> -->
+              </div>
+              </td>
+              <td width="25%">
+              <div>
+                  <img class="imgcell" src="static/gifs/dog_tail_square.gif" alt="Dog Tail">
+                  <!-- <p align="center">Body parts <br/> (<i>"dog_tail" video</i>)</p> -->
+              </div>
+              </td>
+              <td width="25%">
+              <div>
+                  <img class="imgcell" src="static/gifs/pants_workout_square.gif" alt="Workout Pants">
+                  <!-- <p align="center">Deformable objects <br/> (<i>"pants_workout" video</i>)</p> -->
+              </div>
+              </td>
+          </tr>
+          <tr>
+              <td width="25%">
+              <div>
+                  <img class="imgcell" src="static/gifs/skz_square.gif" alt="SKZ">
+                  <!-- <p align="center">Similar objects, occlusion <br/> (<i>"skz" video</i>) </p> -->
+              </div>
+              </td>
+              <td width="25%">
+              <div>
+                  <img class="imgcell" src="static/gifs/tattoo_square.gif" alt="Tattoo">
+                  <!-- <p align="center">Tattos/patterns <br/> (<i>"tattoo" video</i>) </p> -->
+              </div>
+              </td>
+              <td width="25%">
+              <div>
+                  <img class="imgcell" src="static/gifs/ice_cream_square.gif" alt="Ice Cream">
+                  <!-- <p align="center">Quick motion <br/> (<i>"ice_cream" video</i>)</p> -->
+              </div>
+              </td>
+              <td width="25%">
+              <div>
+                  <img class="imgcell" src="static/gifs/vlog_square.gif" alt="Vlog">
+                  <!-- <p align="center">Multi-object parts <br/> (<i>"vlog" video</i>) </p> -->
+              </div>
+              </td>
+          </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="container is-max-desktop">
+      <p class="subtitle"><b>Partial and Unusual Masks for Video Object Segmentation (PUMaVOS)</b> dataset has the following properties:</p>
+      <ul>
+        <li><b>23</b> videos, <b>19770</b> densely-annotated frames;</li>
+        <li>Covers complex practical use cases such as object parts, frequent occlusions, fast motion, deformable objects and more;</li>
+        <li>Average length of the video is <b>659 frames</b> or <b>28s</b>, with the longer ones spanning <b>1min</b>;</li>
+        <li>Fully densely annotated at <b>30FPS</b>;</li>
+        <li>Benchmark-oriented: no separation into training/test, designed to be as diverse as possible to test your models;</li>
+        <li>100% open and free to download.</li>
+      </ul>
+      <br>
+      <h3 id="download" class="subtitle"><b>Download</b></h3>
+      <p>Separate sequences and masks are available here: <a href="TODO">[TODO Google Drive]</a></p>
+      <br>
+      <p>PUMaVOS <code>.zip</code> download link: <a href="TODO">[TODO Google Drive]</a></p>
+      <br>
+      <h3 id="license" class="subtitle"><b>PUMaVOS license</b></h3>
+      <a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by.png" width="15%"></a>
+      <p>PUMaVOS is released under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0 license</a>, - you can use it for any purpose (including <b>commercial</b>), you only need to credit the authors (us) whenever you do and indicate if you&#39;ve made any modifications. See the full license text in <a href="LICENSE_PUMaVOS">LICENSE_PUMaVOS</a></p>
+      <br>
+      <p>PUMaVOS contains <b>5</b> videos from YouTube. We do not claim ownership of them, and here are the links to the original videos and their creators:</p>
+      <ul>
+        <li><a href="TODO">"pants_workout" sequence</a> by <a href="TODO">Author</a></li>
+        <li><a href="TODO">"billie_shoes" sequence</a> by <a href="TODO">Author</a></li>
+        <li><a href="TODO">"bille_hair" sequence</a> by <a href="TODO">Author</a></li>
+        <li><a href="TODO">"nails" sequence</a> by <a href="TODO">Author</a></li>
+        <li><a href="TODO">"skz" sequence</a> by <a href="TODO">Author</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
 
 <!--BibTex citation -->
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <h2 class="title">BibTeX</h2>
-      <pre><code>BibTex Code Here</code></pre>
-    </div>
+<section class="section is-light" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <p>If you are using <b>XMem++</b> <b>PUMaVOS</b> dataset in your work, please cite us:</p>
+    <pre><code>@misc{bekuzarov2023xmem,
+    title={XMem++: Production-level Video Segmentation From Few Annotated Frames}, 
+    author={Maksym Bekuzarov and Ariana Bermudez and Joon-Young Lee and Hao Li},
+    year={2023},
+    eprint={2307.15958},
+    archivePrefix={arXiv},
+    primaryClass={cs.CV}
+}</code>
+    </pre>
+  </div>
 </section>
 <!--End BibTex citation -->
 
@@ -289,13 +384,11 @@
     <div class="columns is-centered">
       <div class="column is-8">
         <div class="content">
-
           <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>.
-            You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>. 
+            <br> This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
             Commons Attribution-ShareAlike 4.0 International License</a>.
           </p>
-
         </div>
       </div>
     </div>
@@ -306,7 +399,7 @@
   
 <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
 
-    <!-- End of Statcounter Code -->
+<!-- End of Statcounter Code -->
 
-  </body>
-  </html>
+</body>
+</html>

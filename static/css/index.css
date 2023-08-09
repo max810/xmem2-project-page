@@ -123,6 +123,13 @@ body {
 
 .results-carousel video {
   margin: 0;
+  /* width: 100%; */
+}
+
+#results-carousel {
+  max-width: 80%; 
+  margin-left: auto; 
+  margin-right: auto;
 }
 
 .slider-pagination .slider-page {
@@ -133,5 +140,33 @@ body {
   font-size: smaller;
 }
 
+.subtitle {
+  margin-top: 10px;
+}
 
 
+.title.is-3{
+  margin-left: 10%;
+}
+
+.imgcell {
+  outline: black 2px solid;
+  outline-offset: -2px;
+  border-collapse: collapse;
+}
+
+table.imagegrid {
+  table-layout: auto;
+  border-collapse: separate;
+  border-spacing: 10px 5px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+ul {
+  list-style-type: disc;
+}
+
+ul.spaced > li {
+  margin: 10px 0;
+}
