@@ -146,7 +146,7 @@ body {
 
 
 .title.is-3{
-  margin-left: 10%;
+  /* margin-left: 10%; */
 }
 
 .imgcell {
@@ -168,5 +168,5 @@ ul {
 }
 
 ul.spaced > li {
-  margin: 10px 0;
+  margin: 0.25em 0;
 }

@@ -176,12 +176,53 @@
 </section>
 <!-- End paper abstract -->
 
+<section class="section hero is-small">
+  <div class="container is-max-desktop ">
+    <h2 class="title is-3">Overview</h2>
+    <div class="content">
+      <p>
+        <div class="container">
+          <p>XMem++ is a <strong>memory-based</strong> interactive segmentation model - this means it uses a set of reference frames/feature maps and their corresponding masks, either predicted or given as ground truth if available, to predict masks for new frames based on <strong>how similar they are to already processed frames</strong> with known segmentation.</p>
+          <p>Just like XMem, we use the two types of memory inspired by the Atkinson-Shiffrin human memory model - working memory and long-term memory. The first one stores recent convolutional feature maps with rich details, and the other - heavily compressed features for long-term dependencies across frames that are far apart in the video.</p>
+          <p>However, existing segmentation methods (<a href="https://arxiv.org/abs/2207.07115">XMem</a>, <a href="https://arxiv.org/abs/2207.06953">TBD</a>, <a href="https://arxiv.org/abs/2106.02638">AoT</a>, <a href="https://arxiv.org/abs/2210.09782">DeAOT</a>, <a href="https://arxiv.org/abs/2106.05210">STCN</a>, etc.) that are using memory mechanisms to predict the segmentation mask for the current frame, typically process frames one by one, and thus suffer from a common issue - &quot;jumps&quot; in visual quality, when the new ground truth annotation is encountered in the video</p>
+        </div>
+      </p>
+    </div>
+  </div>
+  <div class="container hero-body" >
+    <div class="container" style="border: none;" width="200%">
+      <a href="static/images/architecture_explanations.jpg"><img src="static/images/architecture_explanations.jpg"></a>
+    </div>
+    <p class="has-text-centered" style="font-style: italic;">XMem++ architecture.</p>
+  </div>
+</section>
+
+<section class="section hero is-small is-light">
+  <div class="container is-max-desktop ">
+    <h2 class="title is-3">Frame annotation candidates selector</h2>
+    <div class="content">
+      <p>
+        <div class="container">
+          <p>XMem++ is equipped with a single yet powerful algorithm to select which frames the user should annotate next to maximize performance and save time. It is based on an idea of <b>diversity</b> - to select the frames that capture the most variety of the target object's appearance - to <b>maximize the information</b> the network will get with them annotated.</p>
+          <p>It takes into account <b>which object</b> we are trying to segment and recommends frames that have the most variety in that specific object's appearance.</p>
+        </div>
+      </p>
+    </div>
+  </div>
+  <div class="container is-max-desktop hero-body">
+    <div class="container" style="border: none;" width="100%">
+      <a href="static/images/frame_selector_showcase.jpg"><img src="static/images/frame_selector_showcase.jpg"></a>
+    </div>
+    <p class="has-text-centered" style="font-style: italic;">Frame selector at work - notice how given a different person in rows 1) and 2) it selects different frames where <b>that specific person</b> moves. In the third row the frames capture the target object in a variety of backgrounds, expressions and lighting conditions.</p>
+  </div>
+</section>
+
 
 <!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body is-centered">
-    <div class="container">
-      <h2 class="title is-3" style="margin-left: 10%;">Performance</h2>
+<section class="section hero is-small">
+  <div class=" is-centered">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3">Performance</h2>
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item item-video1">
           <video poster="" id="video2" autoplay controls muted loop width="100%" height="100%">
@@ -215,13 +256,13 @@
         </div>
       </div>
     </div>
-  </div>
-  <div class="container is-max-desktop">
-    <ul class="spaced">
-      <li><span class="subtitle">XMem++ achieves great visual results for a variety of use-cases, using only a few annotations (typically &lt; <b>10</b> for a <b>30-60s</b> video)</span></li>
-      <li><span class="subtitle">It treats ground truth annotations as references and infers masks for new frames based on their similarity to known references.</span></li>
-      <li><span class="subtitle">No fine-tuning, plug&amp;play, <b>30FPS</b> on <b>480p</b> video on a single GPU - check out the <a href="TODO GITHUB">[Code]</a> on GitHub for more details.</span></li>
-    </ul>
+    <div class="container is-max-desktop" style="padding-top: 1em">
+      <ul class="spaced">
+        <li><span class="subtitle">XMem++ achieves great visual results for a variety of use-cases, using only a few annotations (typically &lt; <b>10</b> for a <b>30-60s</b> video)</span></li>
+        <li><span class="subtitle">It treats ground truth annotations as references and infers masks for new frames based on their similarity to known references.</span></li>
+        <li><span class="subtitle">No fine-tuning, plug&amp;play, <b>30FPS</b> on <b>480p</b> video on a single GPU - check out the <a href="TODO GITHUB">[Code]</a> on GitHub for more details.</span></li>
+      </ul>
+    </div>
   </div>
 </section>
 <!-- End video carousel -->
@@ -229,9 +270,9 @@
 
 
 <!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
+<section class="section hero is-small is-light">
+  <div class="">
+    <div class="container is-max-desktop">
       <!-- Paper video. -->
       <h2 class="title is-3">Video Presentation</h2>
       <div class="columns is-centered has-text-centered">
@@ -251,7 +292,7 @@
 
 <!-- Paper poster -->
 <!-- <section class="hero is-small is-light">
-  <div class="hero-body">
+  <div class="">
     <div class="container">
       <h2 class="title">Poster</h2>
 
@@ -262,15 +303,15 @@
     </div>
   </section> -->
 <!--End paper poster -->
-<section class="hero is-small" id="pumavos-dataset">
-  <div class="hero-body">
-    <div class="container">
+<section class="section is-small hero" id="pumavos-dataset">
+  <div class="">
+    <div class="container is-max-desktop">
       <h2 class="title is-3">PUMaVOS dataset</h2>
+      <div class="container" style="margin-bottom: 20px;">
+        <p class="subtitle">We used XMem++ to collect and annotate <b>PUMaVOS</b> - a dataset of challenging and practical use cases inspired by the movie production industry.</p>
+      </div>
       <div class="columns is-centered has-text-centered">
         <div class="hero-body container is-max-desktop">
-          <div class="container" style="margin-bottom: 20px;">
-            <span class="subtitle">We used XMem++ to collect and annotate <b>PUMaVOS</b> - a dataset of challenging and practical use cases inspired by the movie production industry.</span>
-          </div>
           <table class="imagegrid">
           <tr>
               <td width="25%">
@@ -361,8 +402,8 @@
 </section>
 
 <!--BibTex citation -->
-<section class="section is-light" id="BibTeX">
-  <div class="container is-max-desktop content">
+<section class="" id="BibTeX">
+  <div class="container is-max-desktop content" style="margin-bottom: 2em;">
     <h2 class="title">BibTeX</h2>
     <p>If you are using <b>XMem++</b> <b>PUMaVOS</b> dataset in your work, please cite us:</p>
     <pre><code>@misc{bekuzarov2023xmem,
